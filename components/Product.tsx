@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image';
 import Typography from "@mui/material/Typography";
 import AddToCartButton from './AddToCartButton';
+import { useAppSelector } from '@/utils/hook';
 
 interface Props{
     id: number;
@@ -13,7 +14,8 @@ interface Props{
     price: number;
 }
 const Product = ({id, image, name, category, price}: Props) => {
-    const isItemInCart = false;
+    const {cart} = useAppSelector((state) => state.cart)
+    const isItemInCart = !!cart.find((item) => item.id === id)
   return (
     <Box sx={{display: "flex ", flexDirection: "column",  marginTop: "2rem"}}>
 

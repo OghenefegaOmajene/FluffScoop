@@ -2,8 +2,8 @@
 import { Box } from '@mui/material'
 import React from 'react'
 import Image from 'next/image';
-import { useAppDispatch } from '@/utils/hook';
-import { addToCart } from '../store/cartSlice';
+import { useAppDispatch, useAppSelector } from '@/utils/hook';
+import { addToCart, increaseQuantity } from '../store/cartSlice';
 
 interface Props{
     isItemInCart: boolean;
@@ -14,6 +14,10 @@ interface Props{
 
 const AddToCartButton = ({isItemInCart, id, name, price}: Props) => {
     const dispatch = useAppDispatch();
+    const {cart} = useAppSelector((state) => state.cart);
+    const isItem = (item: any) => item.id === id;
+    const itemIndex = cart.findIndex(isItem);
+
   return (
     <Box
         sx={{
@@ -51,7 +55,7 @@ const AddToCartButton = ({isItemInCart, id, name, price}: Props) => {
                 >
                     -
                 </button>
-                    0
+                    {cart[itemIndex].quantity}
                 <button 
                     style={{
                         backgroundColor: "transparent", 
@@ -60,6 +64,7 @@ const AddToCartButton = ({isItemInCart, id, name, price}: Props) => {
                         borderRadius: "4rem",
                         marginRight: "0.5rem"
                     }}
+                    onClick={() => dispatch(increaseQuantity(itemIndex))}
                 >
                     +
                 </button>

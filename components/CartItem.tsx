@@ -1,14 +1,18 @@
 'use client'
+import { removeFromCart } from '@/store/cartSlice';
+import { useAppDispatch } from '@/utils/hook';
 import { Box, Typography } from '@mui/material';
 import React from 'react'
 
 
 interface Props{
+    id: number;
     name: string;
     price: number;
     quantity: number;
 }
-const CartItem = ({name, price, quantity}: Props) => {
+const CartItem = ({id, name, price, quantity}: Props) => {
+    const dispatch = useAppDispatch();
     const totalPrice = price * quantity;
   return (
     <Box 
@@ -39,22 +43,23 @@ const CartItem = ({name, price, quantity}: Props) => {
                 <Typography sx={{color: "#87635A", fontWeight: "600"}}>{totalPrice.toFixed(2)}</Typography>
             </Box>
 
-            <button 
-                style={{
-                    color: "#AD8A85", 
-                    border: "1px solid #AD8A85",
-                    borderRadius: "4rem",
-                    background: "transparent",
-                    padding: "0.75rem 0.5rem",
-                    height: "1rem",
-                    display: "flex", 
-                    justifyContent: "center",
-                    alignItems: "center"
-                }}
+        </Box>
+        <button 
+            style={{
+                color: "#AD8A85", 
+                border: "1px solid #AD8A85",
+                borderRadius: "4rem",
+                background: "transparent",
+                padding: "0.75rem 0.5rem",
+                height: "1rem",
+                display: "flex", 
+                justifyContent: "center",
+                alignItems: "center"
+            }}
+            onClick={() => dispatch(removeFromCart(id))}
             >
                 x
-            </button>
-        </Box>
+        </button>
     </Box>
   )
 }

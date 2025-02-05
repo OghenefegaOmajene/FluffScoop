@@ -20,20 +20,16 @@ export const cartSlice = createSlice({
     addToCart: (state, action) =>{
         state.cart.push(action.payload);
     },
-    // increment: (state) => {
-    //   state.value += 1
-    // },
-    // decrement: (state) => {
-    //   state.value -= 1
-    // },
-    // // Use the PayloadAction type to declare the contents of `action.payload`
-    // incrementByAmount: (state, action: PayloadAction<number>) => {
-    //   state.value += action.payload
-    // },
+    removeFromCart: (state, action) => {
+      state.cart = state.cart.filter((item) => item.id !== action.payload, 1)
+    },
+    increaseQuantity: (state, action) =>{
+      state.cart[action.payload].quantity += 1;
+    },
   },
 })
 
-export const {addToCart} = cartSlice.actions
+export const {addToCart, removeFromCart, increaseQuantity} = cartSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectCart = (state: RootState) => state.cart.cart
