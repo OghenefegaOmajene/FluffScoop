@@ -21,15 +21,23 @@ export const cartSlice = createSlice({
         state.cart.push(action.payload);
     },
     removeFromCart: (state, action) => {
-      state.cart = state.cart.filter((item) => item.id !== action.payload, 1)
-    },
+      state.cart = state.cart.filter((item) => item.id !== action.payload);
+    },    
     increaseQuantity: (state, action) =>{
       state.cart[action.payload].quantity += 1;
+    },
+    decreaseQuantity: (state, action) => {
+      const index = action.payload;
+      if (state.cart[index].quantity > 1) {
+        state.cart[index].quantity -= 1;
+      } else {
+        state.cart.splice(index, 1); // Remove item if quantity is 1
+      }
     },
   },
 })
 
-export const {addToCart, removeFromCart, increaseQuantity} = cartSlice.actions
+export const {addToCart, removeFromCart, increaseQuantity, decreaseQuantity} = cartSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectCart = (state: RootState) => state.cart.cart

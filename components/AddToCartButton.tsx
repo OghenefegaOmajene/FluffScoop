@@ -3,7 +3,7 @@ import { Box } from '@mui/material'
 import React from 'react'
 import Image from 'next/image';
 import { useAppDispatch, useAppSelector } from '@/utils/hook';
-import { addToCart, increaseQuantity } from '../store/cartSlice';
+import { addToCart, increaseQuantity, decreaseQuantity, removeFromCart } from '../store/cartSlice';
 
 interface Props{
     isItemInCart: boolean;
@@ -52,6 +52,13 @@ const AddToCartButton = ({isItemInCart, id, name, price}: Props) => {
                         borderRadius: "4rem",
                         marginLeft: "0.5rem"
                     }}
+                    onClick={() => {
+                        if (cart[itemIndex].quantity === 1) {
+                          dispatch(removeFromCart(id)); // Remove item from cart
+                        } else {
+                          dispatch(decreaseQuantity(itemIndex)); // Decrease quantity
+                        }
+                    }}
                 >
                     -
                 </button>
@@ -85,7 +92,7 @@ const AddToCartButton = ({isItemInCart, id, name, price}: Props) => {
                 <Image
                     src="\images\icon-add-to-cart.svg"
                     alt="cart"
-                    height={16}
+                    height={20}
                     width={16}
                     style={{marginRight: "0.5rem"}}
                 />
