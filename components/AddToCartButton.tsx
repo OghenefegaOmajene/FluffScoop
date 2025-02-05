@@ -1,0 +1,94 @@
+'use client';
+import { Box } from '@mui/material'
+import React from 'react'
+import Image from 'next/image';
+import { useAppDispatch } from '@/utils/hook';
+import { addToCart } from '../store/cartSlice';
+
+interface Props{
+    isItemInCart: boolean;
+    id: number;
+    name: string;
+    price: number;
+}
+
+const AddToCartButton = ({isItemInCart, id, name, price}: Props) => {
+    const dispatch = useAppDispatch();
+  return (
+    <Box
+        sx={{
+            border: isItemInCart ? "none" : "1px solid #AD8A85",
+            borderRadius: "4rem",
+            backgroundColor: isItemInCart ? "#C73B0F" : "#FFFFFF",
+            color: isItemInCart ? "#FFFFFF" : "#260F08", 
+            fontSize: "0.875rem",
+            fontWeight: 600,
+            width: "80%",
+            alignSelf: "center",
+            position: "relative",
+            bottom: "20px",
+            height: "100%"
+        }}
+    >
+        {isItemInCart ?(
+            <Box 
+                sx={{
+                    display: "flex", 
+                    justifyContent: "space-between", 
+                    alignItems: "center",
+                    height: "100%",
+                    width: "100%"
+                }}
+            >
+                <button 
+                    style={{
+                        backgroundColor: "transparent", 
+                        border: "1px solid white", 
+                        color: "#FFFFFF",
+                        borderRadius: "4rem",
+                        marginLeft: "0.5rem"
+                    }}
+                >
+                    -
+                </button>
+                    0
+                <button 
+                    style={{
+                        backgroundColor: "transparent", 
+                        border: "1px solid white", 
+                        color: "#FFFFFF",
+                        borderRadius: "4rem",
+                        marginRight: "0.5rem"
+                    }}
+                >
+                    +
+                </button>
+            </Box>
+        ) : (
+            <button 
+                style={{
+                    width: "100%", 
+                    background: "transparent", 
+                    border: "none",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center"
+                }}
+                onClick={() => dispatch(addToCart({id: id, price: price, name: name, quantity: 1}))}
+            >
+                <Image
+                    src="\images\icon-add-to-cart.svg"
+                    alt="cart"
+                    height={16}
+                    width={16}
+                    style={{marginRight: "0.5rem"}}
+                />
+                Add To Cart
+            </button>
+        )}
+    </Box>
+  )
+}
+
+export default AddToCartButton
