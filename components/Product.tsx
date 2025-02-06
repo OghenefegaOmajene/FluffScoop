@@ -43,7 +43,7 @@ const Product = ({id, image, name, category, price}: Props) => {
         </Typography>
 
         <Typography sx={{color: "#C73B0F", fontWeight: "600"}}>
-           {price.toFixed(2)} 
+           ${price.toFixed(2)} 
         </Typography>
     </Box>
   )

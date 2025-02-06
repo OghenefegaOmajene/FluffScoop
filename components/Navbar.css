@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Stereo Club';
+    src: url('../fonts/stereo-club.ttf') format('truetype'); 
+}
+*{
+    font-family: Stereo Club, sans-serif;
+    /* background-color: #ff83648f; */
+    /* background-color: #ff836496; */
+}

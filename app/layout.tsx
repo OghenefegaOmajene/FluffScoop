@@ -22,7 +22,7 @@ export default function RootLayout({
           <link rel="icon" type="image/png" href="public/favicon.png" />
         </Head> 
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} style={{padding: "none  "}}>
         <Provider store={store}>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ThemeProvider theme={theme}>{children}</ThemeProvider>
