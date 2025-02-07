@@ -2,3 +2,45 @@ body,
 html{
   background-color: #fcf8f6;
 }
+.swiper-container {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.main-img {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  bottom: 10px;
+}
+
+.btn-block {
+  display: flex;
+  gap: 10px;
+}
+
+.light-btn {
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
