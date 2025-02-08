@@ -4,6 +4,7 @@ import React from 'react'
 import Image from 'next/image';
 import { useAppDispatch, useAppSelector } from '@/utils/hook';
 import { addToCart, increaseQuantity, decreaseQuantity, removeFromCart } from '../store/cartSlice';
+// import { toast } from 'react-toastify';
 
 interface Props{
     isItemInCart: boolean;
@@ -87,7 +88,10 @@ const AddToCartButton = ({isItemInCart, id, name, price}: Props) => {
                     alignItems: "center",
                     justifyContent: "center"
                 }}
-                onClick={() => dispatch(addToCart({id: id, price: price, name: name, quantity: 1}))}
+                onClick={() => {
+                    dispatch(addToCart({ id: id, price: price, name: name, quantity: 1 }));
+                    // toast("Product Added to Cart!", { autoClose: 3000 }); // Show toast notification
+                }}
             >
                 <Image
                     src="\images\icon-add-to-cart.svg"

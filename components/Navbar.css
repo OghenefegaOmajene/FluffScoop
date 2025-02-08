@@ -19,7 +19,7 @@
 
 #checkbox {
     display: none;
-    background-color: crimson;
+    background-color: #ffe5d770;
   }
   
   .toggle {
@@ -101,4 +101,15 @@
     .menu-toggle{
         display: flex;
     }
+    .Toolbar{
+      padding-left: 0px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .logo{
+    width: 1rem;
+  }
+  .slogan{
+    font-size: 1px;
+  }
 }

@@ -1,18 +1,30 @@
 import React from 'react';
 import { useState } from 'react';
-// import Image from 'next/image';
-import { AppBar, Toolbar, Typography, Box, Button } from '@mui/material';
+import Cart from './Cart';
+import { useAppSelector } from '@/utils/hook';
+import { AppBar, Toolbar, Typography, Box, Button, Badge } from '@mui/material';
 import { FaCartShopping } from 'react-icons/fa6';
 import './Navbar.css'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false); // Cart state
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
+  const cartItems = useAppSelector((state) => state.cart.cart);
+
+  // Calculate total number of items
+  const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
+    <>
     <AppBar 
         sx={{
             backgroundColor: "#ffffff",
@@ -44,6 +56,7 @@ const Navbar = () => {
                 width: "5rem",
                 height: "100%"
             }}
+            className='logo'
           />
           <Box
             sx={{
@@ -81,7 +94,11 @@ const Navbar = () => {
                 justifyContent: "center"
             }}
         >
-          <Button color="inherit" style={{fontSize: "30px", color: "#ff8264"}}><FaCartShopping></FaCartShopping></Button>
+          <Button onClick={toggleCart} color="inherit" style={{fontSize: "30px", color: "#ff8264"}}>
+            <Badge badgeContent={totalItems} color="error">
+              <FaCartShopping />
+            </Badge>
+          </Button>
         </Box>
 
         <div className="menu-toggle">
@@ -94,6 +111,9 @@ const Navbar = () => {
         </div>
       </Toolbar>
     </AppBar>
+  
+    <Cart isCartOpen={isCartOpen} toggleCart={toggleCart} />
+    </>
   );
 };
 

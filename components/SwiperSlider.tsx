@@ -185,7 +185,7 @@ const SwiperSlider = () => {
                   alt="" 
                   style={{
                     width: "20rem",
-                    height: "30rem",
+                    height: "24rem",
                     zIndex: "3",
                     position: "absolute",
                     right: "10%",

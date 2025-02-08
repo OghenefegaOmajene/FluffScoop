@@ -3,7 +3,6 @@ import Container  from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Product from "@/components/Product";
-import Cart from "@/components/Cart";
 import data from '../data/data.json'
 import { GiCakeSlice } from "react-icons/gi";
 
@@ -31,7 +30,7 @@ const Desserts = () => {
             return <Product key={item.id} {...item} />
           })}
         </Box>
-         <Cart/>
+         
       </Box>
       
     </Container>

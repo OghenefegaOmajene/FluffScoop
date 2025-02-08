@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Typography from "@mui/material/Typography";
 import AddToCartButton from './AddToCartButton';
 import { useAppSelector } from '@/utils/hook';
+// import { ToastContainer, toast } from 'react-toastify';
 
 interface Props{
     id: number;
@@ -16,6 +17,8 @@ interface Props{
 const Product = ({id, image, name, category, price}: Props) => {
     const {cart} = useAppSelector((state) => state.cart)
     const isItemInCart = !!cart.find((item) => item.id === id)
+
+    // const notify = () => toast("Product Added to Cart!");
   return (
     <Box sx={{display: "flex ", flexDirection: "column",  marginTop: "2rem"}}>
 
@@ -33,6 +36,7 @@ const Product = ({id, image, name, category, price}: Props) => {
             price={price}
             name={name}
         />
+    
 
         <Typography sx={{color: "#87635A", fontSize: "0.875rem"}}>
            {category} 
