@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Head>
-          <link rel="icon" type="image/png" href="public/favicon.png" />
+          <link rel="icon" type="image/png" href="/images/favicon2.png" />
         </Head> 
       </head>
       <body className={inter.className} style={{padding: "none  "}}>

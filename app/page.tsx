@@ -3,6 +3,7 @@ import React from "react";
 import Desserts from "./Desserts";
 import Homepage from "./Homepage";
 import OurStory from "./OurStory";
+import Footer from "./Footer";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Homepage></Homepage>
       <OurStory></OurStory>
       <Desserts></Desserts>
+      <Footer></Footer>
     </Container>
   );
 };
