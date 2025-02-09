@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-scroll';
 import Cart from './Cart';
 import { useAppSelector } from '@/utils/hook';
 import { AppBar, Toolbar, Typography, Box, Button, Badge } from '@mui/material';
@@ -76,13 +77,23 @@ const Navbar = () => {
           </Box>
         </Box>
 
-        <Box sx={{color: "#ff8264"}}>
+        <Box sx={{ color: "#ff8264" }}>
           <div className="navLinks">
-            <Button color="inherit">Our Story</Button>
-            <Button color="inherit">Ice-Creams</Button>
-            <Button color="inherit">Desserts</Button>
-            <Button color="inherit">Doughnuts</Button>
-            <Button color="inherit">Burgers</Button>
+            <Link to="our-story" smooth={true} duration={500} className="nav-link">
+              <Button color="inherit">Our Story</Button>
+            </Link>
+            <Link to="ice-creams" smooth={true} duration={500} className="nav-link">
+              <Button color="inherit">Ice-Creams</Button>
+            </Link>
+            <Link to="desserts" smooth={true} duration={500} className="nav-link">
+              <Button color="inherit">Desserts</Button>
+            </Link>
+            <Link to="doughnuts" smooth={true} duration={500} className="nav-link">
+              <Button color="inherit">Doughnuts</Button>
+            </Link>
+            <Link to="burgers" smooth={true} duration={500} className="nav-link">
+              <Button color="inherit">Burgers</Button>
+            </Link>
           </div>
         </Box>
 

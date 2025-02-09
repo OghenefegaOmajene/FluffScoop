@@ -1,7 +1,8 @@
 body, 
 html{
   background-color: #fcf8f6;
-}
+  scroll-behavior: smooth;
+} 
 .swiper-container {
   width: 100%;
   height: 100vh;

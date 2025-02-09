@@ -33,7 +33,7 @@ import { Container } from "@mui/material";
 import Navbar from "@/components/Navbar";
 import SwiperSlider from "@/components/SwiperSlider";
 
-const Homepage = () => {
+const Homepage: React.FC = () => {
   return (
     <Container maxWidth={false} disableGutters>
       <Navbar />

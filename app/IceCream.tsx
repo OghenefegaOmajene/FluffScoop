@@ -97,30 +97,33 @@ const IceCream: React.FC = () => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ paddingTop: "5.5rem", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-      <Typography variant="h1" sx={{ color: "#260F08", fontSize: "2.5rem"}}>
-        Ice Creams <GiIceCreamCone />
-      </Typography>
+    <div id="ice-creams">
+      <Container maxWidth="lg" sx={{ paddingTop: "5.5rem", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+        <Typography variant="h1" sx={{ color: "#260F08", fontSize: "2.5rem"}}>
+          Ice Creams <GiIceCreamCone />
+        </Typography>
 
-      <Box
-        sx={{
-          position: "relative",
-          overflow: "visible",
-          width: "100%",
-          maxWidth: "900px", // ✅ Controls overall slider width
-          margin: "0 0px 0px 130px", // ✅ Centers horizontally
-          padding: "2rem",
-        }}
-      >
-        <Slider {...settings}>
-          {iceCreamData.map((item) => (
-            <div key={item.id} style={{ padding: "0 5px" }}> {/* ✅ Reduces spacing between items */}
-              <IceCreamProduct {...item} />
-            </div>
-          ))}
-        </Slider>
-      </Box>
-    </Container>
+        <Box
+          sx={{
+            position: "relative",
+            overflow: "visible",
+            width: "100%",
+            maxWidth: "900px", // ✅ Controls overall slider width
+            margin: "0 0px 0px 130px", // ✅ Centers horizontally
+            padding: "2rem",
+          }}
+        >
+          <Slider {...settings}>
+            {iceCreamData.map((item) => (
+              <div key={item.id} style={{ padding: "0 5px" }}> {/* ✅ Reduces spacing between items */}
+                <IceCreamProduct {...item} />
+              </div>
+            ))}
+          </Slider>
+        </Box>
+      </Container>
+    </div>
+    
   );
 };
 

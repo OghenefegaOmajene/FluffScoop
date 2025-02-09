@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { Typography, Container, Box } from '@mui/material'
 import gsap from 'gsap'
 
-const OurStory = () => {
+const OurStory: React.FC = () => {
     const animateSlide = () => {
         gsap.fromTo(
           ".img",
@@ -28,7 +28,8 @@ const OurStory = () => {
         animateSlide();
     })
   return (
-    <Container sx={{
+    <div id="our-story" style={{ paddingTop: "80px"}}>
+      <Container sx={{
         backgroundColor: "transparent",
         width: "100%",
         height: "30rem",
@@ -36,7 +37,7 @@ const OurStory = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center"
-    }}>
+      }}>
       
         <Box 
             sx={{
@@ -66,7 +67,10 @@ const OurStory = () => {
             }}
             className='img'
         />
-    </Container>
+      </Container>
+    
+    </div>
+
   )
 }
 

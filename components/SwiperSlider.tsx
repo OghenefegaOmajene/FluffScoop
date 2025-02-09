@@ -26,9 +26,14 @@ const SwiperSlider = () => {
 
     gsap.fromTo(
       ".img1",
-      { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 5, ease: "power3.out" }
+      { opacity: 0, y: -800 },
+      { opacity: 1, y: 0, duration: 2, ease: "power2.out" }
     );
+    // gsap.fromTo(
+    //   ".img1",
+    //   { opacity: 0, x: -100 },
+    //   { opacity: 1, x: 0, duration: 5, ease: "power3.out" }
+    // );
 
     gsap.fromTo(
       ".img2",
