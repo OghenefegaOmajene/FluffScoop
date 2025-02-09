@@ -3,7 +3,7 @@ import Container  from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Product from "@/components/Product";
-import data from '../data/data.json'
+import dessertsData from '../data/desserts.json'
 import { GiCakeSlice } from "react-icons/gi";
 
 const Desserts = () => {
@@ -26,7 +26,7 @@ const Desserts = () => {
               justifyContent: "space-between"
           }}
         >
-          {data.map((item) =>{
+          {dessertsData.map((item) =>{
             return <Product key={item.id} {...item} />
           })}
         </Box>

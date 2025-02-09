@@ -32,7 +32,7 @@ const AddToCartButton = ({isItemInCart, id, name, price}: Props) => {
             alignSelf: "center",
             position: "relative",
             bottom: "20px",
-            height: "100%"
+            height: "40px"
         }}
     >
         {isItemInCart ?(

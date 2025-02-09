@@ -10,16 +10,17 @@ const Footer = () => {
             // boxShadow: "0 20px 40px rgb(36, 20, 1)",
             // width: "100%",
             marginTop: "6rem",
+            borderTop: "3px solid #ff8264",
             alignItems: "center",
-            justifyContent: "space-evenly"
+            justifyContent: "center"
         }}
     >
         <img 
             src="/images/favicon2.png" 
             alt="" 
             style={{
-                width: "5rem",
-                height: "5rem"
+                width: "4rem",
+                height: "4rem"
             }}
         />
         <Typography>

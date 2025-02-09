@@ -1,0 +1,37 @@
+[
+    {   
+        "id": 1,
+        "image": "/images/vanilla.png",
+        "name": "French Vanilla Ice Cream",
+        "price": 2.40,
+        "bgColor": "#ffad28"
+    },
+    {   
+        "id": 2,
+        "image": "/images/choco.png",
+        "name": "Coffee Chocolate Ice Cream",
+        "price": 7.90,
+        "bgColor": "#7B3F00"
+    },
+    {   
+        "id": 3,
+        "image": "/images/banana.png",
+        "name": "Banana Pudding Ice Cream",
+        "price": 6.50,
+        "bgColor": "#f4e0a9"
+    },
+    {   
+        "id": 4,
+        "image": "/images/blueberry.png",
+        "name": "Fresh BlueBerry Ice Cream",
+        "price": 3.20,
+        "bgColor": "#680076"
+    },
+    {   
+        "id": 5,
+        "image": "/images/strawberry.png",
+        "name": "StrawBerry Ice Cream",
+        "price": 4.70,
+        "bgColor": "#500B28"
+    }
+]

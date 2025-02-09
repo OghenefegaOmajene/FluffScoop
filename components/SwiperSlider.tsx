@@ -235,7 +235,7 @@ const SwiperSlider = () => {
               sx={{
                 width: "100%",  // Ensures full viewport width
                 height: "36rem",
-                background: "linear-gradient(to right, #E21C34, #500B28)",
+                background: "linear-gradient(to right, #E21C34,rgb(45, 3, 20))",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center", 
