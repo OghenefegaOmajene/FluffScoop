@@ -7,6 +7,7 @@ import gsap from "gsap";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/thumbs";
+import './SwiperSlider.css'
 
 const SwiperSlider = () => {
   const swiperRef = useRef(null);

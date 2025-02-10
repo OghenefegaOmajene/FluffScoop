@@ -5,12 +5,13 @@ import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import IceCreamProduct from "@/components/IceCreamProduct";
-import iceCreamData from "../data/iceCream.json";
+import iceCreamData from "../../data/iceCream.json";
 import { GiIceCreamCone } from "react-icons/gi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import './IceCream.css'
 
 // Define Props Type
 interface ArrowProps {
@@ -56,7 +57,7 @@ const CustomPrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
       height: "40px",
       position: "absolute",
       top: "50%",
-      left: "-100px",
+      left: "-80px",
       transform: "translateY(-50%)",
       cursor: "pointer",
       // zIndex: 10000000,
@@ -82,6 +83,12 @@ const IceCream: React.FC = () => {
     prevArrow: <CustomPrevArrow />,
     responsive: [
       {
+        breakpoint: 1200,
+        settings: {
+          centerMode: false,
+        },
+      },
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
@@ -103,14 +110,16 @@ const IceCream: React.FC = () => {
           Ice Creams <GiIceCreamCone />
         </Typography>
 
-        <Box
-          sx={{
+        <div
+          className="slideshow"
+          style={{
             position: "relative",
             overflow: "visible",
             width: "100%",
             maxWidth: "900px", // ✅ Controls overall slider width
-            margin: "0 0px 0px 130px", // ✅ Centers horizontally
+            margin: "0 0px 0px 130px",// ✅ Centers horizontally
             padding: "2rem",
+            border: "1px solid crimson"
           }}
         >
           <Slider {...settings}>
@@ -120,7 +129,7 @@ const IceCream: React.FC = () => {
               </div>
             ))}
           </Slider>
-        </Box>
+        </div>
       </Container>
     </div>
     

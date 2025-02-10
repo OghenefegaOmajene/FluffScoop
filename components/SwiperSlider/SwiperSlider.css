@@ -1,0 +1,12 @@
+
+@media screen and (max-width: 1210px) {
+    .img1{
+        right: 0;
+    }  
+}
+@media screen and (max-width: 1130px) {
+    .swiper-container{
+        width: 100%;
+    }    
+}
+  
