@@ -50,7 +50,7 @@ const OurStory: React.FC = () => {
             }} 
         >
             <h1 className="txt1" style={{backgroundImage: "linear-gradient(-45deg, #ff5931, #ffab97)", WebkitTextFillColor: "transparent", WebkitBackgroundClip: "text", fontSize: "3rem"}}>Our Story</h1>
-            <p className="txt2" style={{fontSize: "1.2rem"}}>Here at FluffScoop, we believe dessert is not just a treat—it&apos;s  a way of life! What started as a simple love for desserts turned into a mission—to bring the most delicious, mouthwatering treats right to your doorstep. Whether you're a chocoholic, a fruit-lover, or an ice cream addict, we've got something that will make your taste buds dance. Our mission? To spread sweetness, one scoop at a time. So why wait? Dive in, indulge, and let the sugar rush begin!</p>
+            <p className="txt2" style={{fontSize: "1.2rem"}}>Here at FluffScoop, we believe dessert is not just a treat—it&apos;s  a way of life! What started as a simple love for desserts turned into a mission—to bring the most delicious, mouthwatering treats right to your doorstep. Whether you&#39;re a chocoholic, a fruit-lover, or an ice cream addict, we&rsquo;ve got something that will make your taste buds dance. Our mission? To spread sweetness, one scoop at a time. So why wait? Dive in, indulge, and let the sugar rush begin!</p>
         </Box>
     
         <img 
