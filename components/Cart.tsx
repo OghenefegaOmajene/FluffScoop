@@ -87,7 +87,8 @@ const Cart = ({isCartOpen, toggleCart}) => {
                     // right: "1rem",
                     fontSize: "1.5rem",
                     color: "#C73B0F",
-                    width: "30%"
+                    width: "30%",
+                    borderRadius: "10px"
                     // border: "1px solid black"
                 }}
             >

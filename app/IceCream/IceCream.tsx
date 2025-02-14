@@ -14,59 +14,59 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import './IceCream.css'
 
 // Define Props Type
-interface ArrowProps {
-  onClick?: () => void;
-}
+// interface ArrowProps {
+//   onClick?: () => void;
+// }
 
-// Custom Next Arrow Component
-const CustomNextArrow: React.FC<ArrowProps> = ({ onClick }) => (
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      background: "#2d1403",
-      color: "#ff8264",
-      borderRadius: "50%",
-      width: "40px",
-      height: "40px",
-      position: "absolute",
-      right: "0px",
-      top: "50%",
-      transform: "translateY(-50%)",
-      cursor: "pointer",
-      zIndex: 2,
-    }}
-    onClick={onClick}
-  >
-    <FaArrowRight></FaArrowRight>
-  </div>
-);
+// const CustomNextArrow: React.FC<ArrowProps> = ({ onClick }) => (
+//   <div
+//     style={{
+//       display: "flex",
+//       alignItems: "center",
+//       justifyContent: "center",
+//       background: "#2d1403",
+//       color: "#ff8264",
+//       borderRadius: "50%",
+//       width: "40px",
+//       height: "40px",
+//       position: "absolute",
+//       right: "-7px", 
+//       top: "50%",
+//       transform: "translateY(-50%)",
+//       cursor: "pointer",
+//       zIndex: 2,
+      
+//     }}
+//     onClick={onClick}
+//   >
+//     <FaArrowRight />
+//   </div>
+// );
 
-// Custom Prev Arrow Component
-const CustomPrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
-  <div
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      background: "#2d1403",
-      color: "#ff8264",
-      borderRadius: "50%",
-      width: "40px",
-      height: "40px",
-      position: "absolute",
-      top: "50%",
-      left: "-80px",
-      transform: "translateY(-50%)",
-      cursor: "pointer",
-      // zIndex: 10000000,
-    }}
-    onClick={onClick}
-  >
-    <FaArrowLeft></FaArrowLeft>
-  </div>
-);
+// const CustomPrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
+//   <div
+//     style={{
+//       display: "flex",
+//       alignItems: "center",
+//       justifyContent: "center",
+//       background: "#2d1403",
+//       color: "#ff8264",
+//       borderRadius: "50%",
+//       width: "40px",
+//       height: "40px",
+//       position: "absolute",
+//       left: "-60px", 
+//       top: "50%",
+//       transform: "translateY(-50%)",
+//       cursor: "pointer",
+//       zIndex: 2,
+//     }}
+//     onClick={onClick}
+//   >
+//     <FaArrowLeft />
+//   </div>
+// );
+
 
 
 const IceCream: React.FC = () => {
@@ -79,8 +79,8 @@ const IceCream: React.FC = () => {
     autoplaySpeed: 2000,
     centerMode: true, // ✅ Centers slides properly
     centerPadding: "0px", // ✅ Ensures products stay close together
-    nextArrow: <CustomNextArrow />,
-    prevArrow: <CustomPrevArrow />,
+    // nextArrow: <CustomNextArrow />,
+    // prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 1200,
@@ -105,31 +105,49 @@ const IceCream: React.FC = () => {
 
   return (
     <div id="ice-creams">
-      <Container maxWidth="lg" sx={{ paddingTop: "5.5rem", height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+      <Container 
+        maxWidth="lg" 
+        sx={{ 
+          paddingTop: "5.5rem", 
+          height: "90vh", 
+          display: "flex", 
+          flexDirection: "column", 
+          justifyContent: "center", 
+        }}
+      >
         <Typography variant="h1" sx={{ color: "#260F08", fontSize: "2.5rem"}}>
           Ice Creams <GiIceCreamCone />
         </Typography>
 
-        <div
-          className="slideshow"
-          style={{
-            position: "relative",
-            overflow: "visible",
-            width: "100%",
-            maxWidth: "900px", // ✅ Controls overall slider width
-            margin: "0 0px 0px 130px",// ✅ Centers horizontally
-            padding: "2rem",
-            border: "1px solid crimson"
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
           }}
         >
-          <Slider {...settings}>
-            {iceCreamData.map((item) => (
-              <div key={item.id} style={{ padding: "0 5px" }}> {/* ✅ Reduces spacing between items */}
-                <IceCreamProduct {...item} />
-              </div>
-            ))}
-          </Slider>
-        </div>
+          <div
+            className="slideshow"
+            style={{
+              position: "relative",
+              overflow: "hidden",
+              width: "80%",
+              // maxWidth: "80%", 
+              // margin: "0 0px 0px 130px",// ✅ Centers horizontally
+              // padding: "0 60px",
+              // border: "1px solid crimson"
+            }}
+          >
+            <Slider {...settings}>
+              {iceCreamData.map((item) => (
+                <div className="wrapStuff" key={item.id} style={{ padding: "0 5px"}} > {/* ✅ Reduces spacing between items */}
+                  <IceCreamProduct {...item} />
+                </div>
+              ))}
+            </Slider>
+          </div>
+          
+        </Box>
+        
       </Container>
     </div>
     

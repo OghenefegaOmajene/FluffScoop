@@ -24,7 +24,7 @@ const IceCreamProduct = ({id, image, name, price, bgColor}: Props) => {
         display: "flex ", 
         flexDirection: "column", 
         marginTop: "2rem", 
-        // border: "1px solid black",
+        border: "1px solid black",
         width: "13rem",
         // backgroundColor: bgColor,
       }}
@@ -37,6 +37,8 @@ const IceCreamProduct = ({id, image, name, price, bgColor}: Props) => {
             alignItems: "center", 
             justifyContent: "center", 
             borderRadius: "10px",
+            // width: "100%",
+            // border: "3px solid white"
           }}
         >
           <Image 
