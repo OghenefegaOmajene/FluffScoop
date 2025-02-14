@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 import { Box, Typography, IconButton } from '@mui/material'
 import { useAppSelector } from '@/utils/hook';
 import CartItem from './CartItem';
@@ -11,26 +11,47 @@ const Cart = ({isCartOpen, toggleCart}) => {
     const [orderTotal, setOrderTotal] = useState(0);
     const [numberOfItems, setNumberOfItems] = useState(0);
 
-    const getOrderTotal = () =>{
+    // const getOrderTotal = () =>{
+    //     let tempOrderTotal = 0;
+    //     cartItems.map((item) => {    
+    //         tempOrderTotal += item.quantity * item.price;
+    //     });
+    //     setOrderTotal(tempOrderTotal);
+    // };
+
+    // const getNumberOfItems =() => {
+    //     let numberOfItems = 0;
+    //     cartItems.map((item) => { 
+    //         numberOfItems += item.quantity;
+    //     });
+    //     setNumberOfItems(numberOfItems);
+    // }
+
+    // useEffect(() => {
+    //     getOrderTotal();
+    //     getNumberOfItems();
+    // },[cartItems])
+
+    const getOrderTotal = useCallback(() => {
         let tempOrderTotal = 0;
-        cartItems.map((item) => {    
+        cartItems.forEach((item) => {    
             tempOrderTotal += item.quantity * item.price;
         });
         setOrderTotal(tempOrderTotal);
-    };
-
-    const getNumberOfItems =() => {
+    }, [cartItems]);
+    
+    const getNumberOfItems = useCallback(() => {
         let numberOfItems = 0;
-        cartItems.map((item) => { 
+        cartItems.forEach((item) => { 
             numberOfItems += item.quantity;
         });
         setNumberOfItems(numberOfItems);
-    }
-
+    }, [cartItems]);
+    
     useEffect(() => {
         getOrderTotal();
         getNumberOfItems();
-    },[cartItems])
+    }, [getOrderTotal, getNumberOfItems]);
     
   return (
     <Box

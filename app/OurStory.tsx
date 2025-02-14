@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect } from 'react'
 import { Typography, Container, Box } from '@mui/material'
+import Image from 'next/image'
 import gsap from 'gsap'
 
 const OurStory: React.FC = () => {
@@ -53,6 +54,7 @@ const OurStory: React.FC = () => {
             <p className="txt2" style={{fontSize: "1.2rem"}}>Here at FluffScoop, we believe dessert is not just a treat—it&apos;s  a way of life! What started as a simple love for desserts turned into a mission—to bring the most delicious, mouthwatering treats right to your doorstep. Whether you&#39;re a chocoholic, a fruit-lover, or an ice cream addict, we&rsquo;ve got something that will make your taste buds dance. Our mission? To spread sweetness, one scoop at a time. So why wait? Dive in, indulge, and let the sugar rush begin!</p>
         </Box>
     
+        
         <img 
             src="/images/story2.jpg" 
             alt="" 
