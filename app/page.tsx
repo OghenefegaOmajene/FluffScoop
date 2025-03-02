@@ -3,12 +3,12 @@ import React from "react";
 import Desserts from "./Desserts";
 import IceCream from "./IceCream/IceCream";
 import Homepage from "./Homepage";
-import OurStory from "./OurStory";
+import OurStory from "./OurStory/OurStory";
 import Footer from "./Footer";
 
 const Home = () => {
   return (
-    <Container maxWidth={false} disableGutters>
+    <Container className="App" maxWidth={false} disableGutters>
       <Homepage></Homepage>
       <OurStory></OurStory>
       <IceCream></IceCream>

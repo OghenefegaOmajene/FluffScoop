@@ -7,6 +7,7 @@ import dessertsData from '../data/desserts.json'
 import { GiCakeSlice } from "react-icons/gi";
 
 const Desserts: React.FC = () => {
+
   return (
     <div id="desserts" style={{ paddingTop: "40px"}}>
       <Container maxWidth="lg" sx={{paddingTop: "5.5rem"}}>
@@ -17,14 +18,14 @@ const Desserts: React.FC = () => {
           Desserts <GiCakeSlice />
         </Typography>
 
-        <Box 
-          sx={{display: "flex", justifyContent: "space-between"}}
-        >
+        {/* <Box 
+          sx={{display: "flex"}}
+        > */}
           <Box 
             sx={{
                 display: "flex ",
                 flexWrap: "wrap",
-                justifyContent: "space-between"
+                justifyContent: "space-between",
             }}
           >
             {dessertsData.map((item) =>{
@@ -32,7 +33,7 @@ const Desserts: React.FC = () => {
             })}
           </Box>
           
-        </Box>
+        {/* </Box> */}
         
       </Container>
     </div>

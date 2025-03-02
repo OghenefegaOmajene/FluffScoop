@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { Typography, Container, Box } from '@mui/material'
 import Image from 'next/image'
 import gsap from 'gsap'
+import './OurStory.css'
 
 const OurStory: React.FC = () => {
     const animateSlide = () => {

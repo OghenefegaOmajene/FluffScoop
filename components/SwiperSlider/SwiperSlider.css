@@ -1,7 +1,17 @@
 
 @media screen and (max-width: 1210px) {
     .img1{
-        right: 0;
+        left: 700px;
+    }  
+    .swiper-container{
+        height: 50vh;
+        border: 5px solid black;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .img1{
+        left: -100px;
     }  
 }
 @media screen and (max-width: 1130px) {
@@ -9,4 +19,28 @@
         width: 100%;
     }    
 }
+
+@media screen and (max-width: 890px) {
+    .textFade{
+        font-size: 90px;
+        background-color: aqua;
+        width: 40rem;
+    } 
+    .img1{
+        /* left: -10%; */
+        margin-right: 3000px;
+        /* position: relative; */
+        border: 2px solid white;
+    }   
+}
+
+@media screen and (max-width: 740px) {
+    .textFade{
+        font-size: 80px;
+        /* background-color: aqua; */
+
+    } 
+}
+ 
+  
   
