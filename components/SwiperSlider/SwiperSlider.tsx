@@ -67,10 +67,10 @@ const SwiperSlider = () => {
         speed={800}
         effect="coverflow"
         direction="horizontal"
-        autoplay={{
-          delay: 2500, 
-          disableOnInteraction: false, 
-        }}
+        // autoplay={{
+        //   delay: 2500, 
+        //   disableOnInteraction: false, 
+        // }}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
@@ -85,7 +85,7 @@ const SwiperSlider = () => {
               sx={{
                 width: "100%",  // Ensures full viewport width
                 height: "36rem",
-                background: "linear-gradient(to right, #F08EFC, #EE5166)",
+                // background: "linear-gradient(to right, #F08EFC, #EE5166)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center", 
@@ -164,7 +164,7 @@ const SwiperSlider = () => {
               sx={{
                 width: "100%",  // Ensures full viewport width
                 height: "36rem",
-                background: "linear-gradient(to right, #C08552, #F5D3C8)",
+                // background: "linear-gradient(to right, #C08552, #F5D3C8)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center", 
@@ -241,9 +241,10 @@ const SwiperSlider = () => {
               sx={{
                 width: "100%",  // Ensures full viewport width
                 height: "36rem",
-                background: "linear-gradient(to right, #E21C34,rgb(45, 3, 20))",
+                // background: "linear-gradient(to right, #E21C34,rgb(45, 3, 20))",
                 display: "flex",
                 alignItems: "center",
+                // gap: "100px",
                 justifyContent: "center", 
                 textAlign: "start",
                 position: "relative",
@@ -317,7 +318,7 @@ const SwiperSlider = () => {
               sx={{
                 width: "100%",  // Ensures full viewport width
                 height: "36rem",
-                background: "linear-gradient(to right, #FAC267, #FDDB8D)",
+                // background: "linear-gradient(to right, #FAC267, #FDDB8D)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center", 
@@ -394,7 +395,7 @@ const SwiperSlider = () => {
               sx={{
                 width: "100%",  // Ensures full viewport width
                 height: "36rem",
-                background: "linear-gradient(to right,  #F9EFD3, #F7ECCB)",
+                // background: "linear-gradient(to right,  #F9EFD3, #F7ECCB)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center", 
