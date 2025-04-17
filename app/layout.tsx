@@ -9,7 +9,7 @@ import {store} from '../store/store';
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
-const nosifer = Nosifer({
+export const nosifer = Nosifer({
   subsets: ["latin"],
   weight: "400"
 });
@@ -26,7 +26,7 @@ export default function RootLayout({
           <link rel="icon" type="image/png" href="/images/favicon2.png" />
         </Head> 
       </head>
-      <body  className={nosifer.className} style={{padding: "none  "}}>
+      <body  className={inter.className} style={{padding: "none  "}}>
         <Provider store={store}>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ThemeProvider theme={theme}>{children}</ThemeProvider>

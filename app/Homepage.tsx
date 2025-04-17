@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar/Navbar";
 // import SwiperSlider from "@/components/SwiperSlider/SwiperSlider";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import './Homepage.css'
+import { nosifer } from '@/app/layout';
 // import {nosifier} from './layout'
 
 const Homepage: React.FC = () => {
@@ -20,43 +21,51 @@ const Homepage: React.FC = () => {
             width: "100%",
             height: "34rem",
             // backgroundColor: "black",
-            border: "1px solid black",
+            // border: "1px solid black",
             display: "flex",
-            alignItems: "end",
+            alignItems: "center",
             justifyContent: "center"
           }}
         >
           <div className="heroTxt"
             style={{
               width: "40%",
-              height: "80%",
+              height: "50%",
               // backgroundColor: "grey",
-              border: "1px solid black",
+              // border: "1px solid black",
               display: "flex",
               flexDirection: "column",
               // alignItems: "center",
-              // justifyContent: "center"
+              justifyContent: "space-between"
             }}
           >
             <Typography>Check out our new Summer Release</Typography>
-            <Typography>Peanut Butter Pretzel Caramel Swirl Ice Cream</Typography>
+            <Typography variant="h4" className={nosifer.className} sx={{color: "#FD7014"}}>Peanut Butter Pretzel Caramel Swirl Ice Cream</Typography>
             
             <button
               style={{
                 backgroundColor: "white",
-                borderRadius: "30px"
+                borderRadius: "30px",
+                border: 0,
+                width: "150px",
+                height: "50px",
+                padding: "6px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "10px",
               }}
             >
-              Explore our store <FaCircleArrowRight style={{color: "#FD7014"}}/>
+              Explore our store <FaCircleArrowRight style={{color: "#FD7014", fontSize: "20px"}}/>
             </button>
           </div>
           
           <div className="heroImages"
             style={{
-              width: "50%",
+              width: "40%",
               height: "80%",
               // backgroundColor: "grey",
-              border: "1px solid black",
+              // border: "1px solid black",
               display: "flex",
               // alignItems: "center",
               justifyContent: "center"
@@ -67,7 +76,7 @@ const Homepage: React.FC = () => {
               alt="" 
               style={{
                   width: "20rem",
-                  height: "25rem"
+                  height: "27rem"
               }}
             />
             {/* <img 

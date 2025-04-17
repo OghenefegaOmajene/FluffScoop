@@ -4,6 +4,13 @@ body,
 html{ 
   /* background-color: #fcf8f6; */
   background-color: #ffd9bf;
+  /* background: linear-gradient(
+    to right,
+    #ff8c42,
+    #ffb677,
+    #ffa45922 
+  ); */
+
   scroll-behavior: smooth;
 } 
 

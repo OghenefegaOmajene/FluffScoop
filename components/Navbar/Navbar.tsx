@@ -46,7 +46,7 @@ const Navbar = () => {
             justifyContent: "space-evenly",
             alignItems: "center",
             width: "90%",
-            borderRadius: "20px",
+            borderRadius: "30px",
             // backgroundColor: "blue",
         }}
         className='Toolbar'
@@ -80,15 +80,15 @@ const Navbar = () => {
         
         <nav className={`navLinks ${isMenuOpen ? 'open' : ''}`}>
           <Link to="our-story" smooth={true} duration={500} className="nav-link">
-            <Button color="inherit">Our Story</Button>
+            <Button color="inherit"><b>Our Story</b></Button>
           </Link>
 
           <Link to="ice-creams" smooth={true} duration={500} className="nav-link">
-            <Button color="inherit">Ice-Creams</Button>
+            <Button color="inherit"><b>Ice-Creams</b></Button>
           </Link>
 
           <Link to="desserts" smooth={true} duration={500} className="nav-link">
-            <Button color="inherit">Desserts</Button>
+            <Button color="inherit"><b>Desserts</b></Button>
           </Link>
         </nav>
         
