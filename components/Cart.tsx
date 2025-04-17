@@ -5,7 +5,15 @@ import { useAppSelector } from '@/utils/hook';
 import CartItem from './CartItem';
 import { FaTimes } from "react-icons/fa";
 
-const Cart = ({isCartOpen, toggleCart}) => {
+
+interface CartProps {
+    isCartOpen: boolean;
+    toggleCart: () => void;
+  }
+
+  
+// const Cart = ({isCartOpen, toggleCart}) => {
+const Cart: React.FC<CartProps> = ({ isCartOpen, toggleCart }) => {
     const cartItems = useAppSelector((state) => state.cart.cart);
 
     const [orderTotal, setOrderTotal] = useState(0);
