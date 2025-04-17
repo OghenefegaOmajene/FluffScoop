@@ -2,17 +2,15 @@
     font-family: 'Stereo Club';
     src: url('/fonts/stereo-club.ttf') format('truetype'); 
 }
-*{
+/* *{
     font-family: Stereo Club, sans-serif;
-    /* background-color: #ff83648f; */
-    /* background-color: #ff836496; */
-}
+} */
 nav{
   /* background-color: black; */
   width: 60%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   /* gap: 40px; */
 }
 .nav-link Button{

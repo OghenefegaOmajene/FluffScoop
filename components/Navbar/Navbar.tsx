@@ -90,16 +90,12 @@ const Navbar = () => {
           <Link to="desserts" smooth={true} duration={500} className="nav-link">
             <Button color="inherit">Desserts</Button>
           </Link>
-
-          <Link to="doughnuts" smooth={true} duration={500} className="nav-link">
-            <Button color="inherit">Doughnuts</Button>
-          </Link>
         </nav>
         
 
         <Box
             sx={{
-                width: "15%",
+                width: "13%",
                 height: "100%",
                 display: "flex",
                 alignItems: "center",

@@ -49,7 +49,7 @@ const OurStory: React.FC = () => {
                 flexDirection: "column",
                 justifyContent: "center",
                 // paddingRight: "50px",
-                border: "1px solid black"
+                // border: "1px solid black"
             }} 
         >
             <h1 className="txt1" style={{backgroundImage: "linear-gradient(90deg, #FD7014, #ffab97)", WebkitTextFillColor: "transparent", WebkitBackgroundClip: "text", fontSize: "3rem"}}>Our Story</h1>
@@ -67,8 +67,8 @@ const OurStory: React.FC = () => {
                 borderRadius: "50px",
                 padding: "20px 0 20px 20px",
                 overflow: "hidden",
-                boxShadow: "0 20px 40px rgb(36, 20, 1)",
-                border: "1px solid black"
+                // boxShadow: "0 20px 40px rgb(36, 20, 1)",
+                // border: "1px solid black"
             }}
             className='img'
         />

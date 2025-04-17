@@ -1,5 +1,5 @@
 'use client';
-import { Inter } from "next/font/google";
+import { Inter, Nosifer } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { ThemeProvider } from "@mui/material";
@@ -9,6 +9,10 @@ import {store} from '../store/store';
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
+const nosifer = Nosifer({
+  subsets: ["latin"],
+  weight: "400"
+});
 
 export default function RootLayout({
   children,
@@ -22,7 +26,7 @@ export default function RootLayout({
           <link rel="icon" type="image/png" href="/images/favicon2.png" />
         </Head> 
       </head>
-      <body className={inter.className} style={{padding: "none  "}}>
+      <body  className={nosifer.className} style={{padding: "none  "}}>
         <Provider store={store}>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
             <ThemeProvider theme={theme}>{children}</ThemeProvider>
