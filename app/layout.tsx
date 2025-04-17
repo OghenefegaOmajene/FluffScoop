@@ -1,5 +1,5 @@
 'use client';
-import { Inter, Nosifer } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { ThemeProvider } from "@mui/material";
@@ -9,10 +9,7 @@ import {store} from '../store/store';
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
-export const nosifer = Nosifer({
-  subsets: ["latin"],
-  weight: "400"
-});
+
 
 export default function RootLayout({
   children,

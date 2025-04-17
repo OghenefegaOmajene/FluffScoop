@@ -7,7 +7,12 @@ import Navbar from "@/components/Navbar/Navbar";
 // import SwiperSlider from "@/components/SwiperSlider/SwiperSlider";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import './Homepage.css'
-import { nosifer } from '@/app/layout';
+
+import { Nosifer } from "next/font/google";
+const nosifer = Nosifer({
+  subsets: ["latin"],
+  weight: "400"
+});
 // import {nosifier} from './layout'
 
 const Homepage: React.FC = () => {
