@@ -91,7 +91,8 @@ const SwiperSlider = () => {
                 justifyContent: "center", 
                 textAlign: "start",
                 position: "relative",
-                overflow: "hidden"
+                overflow: "hidden",
+                border: "1px solid black"
               }}
             >
                 <Typography 

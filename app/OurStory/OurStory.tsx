@@ -38,21 +38,22 @@ const OurStory: React.FC = () => {
         borderRadius: "10px",
         display: "flex",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "space-around"
       }}>
       
         <Box 
             sx={{
                 width: "30rem", 
-                height: "70%", 
+                height: "60%", 
                 display: "flex", 
                 flexDirection: "column",
                 justifyContent: "center",
-                paddingRight: "50px",
+                // paddingRight: "50px",
+                border: "1px solid black"
             }} 
         >
-            <h1 className="txt1" style={{backgroundImage: "linear-gradient(-45deg, #ff5931, #ffab97)", WebkitTextFillColor: "transparent", WebkitBackgroundClip: "text", fontSize: "3rem"}}>Our Story</h1>
-            <p className="txt2" style={{fontSize: "1.2rem"}}>Here at FluffScoop, we believe dessert is not just a treat—it&apos;s  a way of life! What started as a simple love for desserts turned into a mission—to bring the most delicious, mouthwatering treats right to your doorstep. Whether you&#39;re a chocoholic, a fruit-lover, or an ice cream addict, we&rsquo;ve got something that will make your taste buds dance. Our mission? To spread sweetness, one scoop at a time. So why wait? Dive in, indulge, and let the sugar rush begin!</p>
+            <h1 className="txt1" style={{backgroundImage: "linear-gradient(90deg, #FD7014, #ffab97)", WebkitTextFillColor: "transparent", WebkitBackgroundClip: "text", fontSize: "3rem"}}>Our Story</h1>
+            <p className="txt2" >Here at FluffScoop, we believe dessert is not just a treat—it&apos;s  a way of life! What started as a simple love for desserts turned into a mission—to bring the most delicious, mouthwatering treats right to your doorstep. Whether you&#39;re a chocoholic, a fruit-lover, or an ice cream addict, we&rsquo;ve got something that will make your taste buds dance. Our mission? To spread sweetness, one scoop at a time. So why wait? Dive in, indulge, and let the sugar rush begin!</p>
         </Box>
     
         
@@ -62,11 +63,12 @@ const OurStory: React.FC = () => {
             style={{
                 width: "25rem",
                 height: "70%",
-                backgroundImage: "linear-gradient(-45deg, #ff5931, #ffaa64)",
+                backgroundImage: "linear-gradient(-45deg, #FD7014, #ffaa64)",
                 borderRadius: "50px",
                 padding: "20px 0 20px 20px",
                 overflow: "hidden",
-                boxShadow: "0 20px 40px rgb(36, 20, 1)"
+                boxShadow: "0 20px 40px rgb(36, 20, 1)",
+                border: "1px solid black"
             }}
             className='img'
         />

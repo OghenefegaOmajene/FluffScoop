@@ -28,16 +28,26 @@ const Navbar = () => {
     <>
     <AppBar 
         sx={{
-            backgroundColor: "#ffffff",
+            backgroundColor: "transparent",
+            width: "100%",
             height: "5rem",
-            backdropFilter: "blur(20px)"
+            // backdropFilter: "blur(20px)",
+            display: "flex",
+            alignItems: "center",
+            juatifyContent: "center",
+            top: "5px"
         }}
+        className='appBar'
     >
       <Toolbar
         sx={{
+            backgroundColor: "#ffffff",
             display: "flex",
             justifyContent: "space-evenly",
-            alignItems: "center"
+            alignItems: "center",
+            width: "90%",
+            borderRadius: "20px",
+            // backgroundColor: "blue",
         }}
         className='Toolbar'
       >
@@ -48,75 +58,60 @@ const Navbar = () => {
           className="nav-link" 
           style={{
             cursor: "pointer", 
-            width: "30%", 
-            height: "100%", 
-            display: "flex" ,
+            width: "17%", 
+            height: "5rem", 
+            display: "flex",
             alignItems: "center", 
-            justifyContent: "start"
+            justifyContent: "start",
+            // border: "1px solid black"
           }} 
         >
           
             <img 
-              src="/images/favicon2.png" 
+              src="/images/fluffscoopLogo.png" 
               alt="" 
               style={{
-                  width: "5rem",
-                  height: "100%"
+                  width: "90%",
+                  height: "70%"
               }}
               className='logo'
-            />
-            <Box
-              sx={{
-                  display: "flex" ,
-                  flexDirection: "column",
-                  justifyContent:"center",
-                  gap: "none",
-                  textAlign: "start",
-                  width: "15rem",
-                  height: "80%",
-                  color: "#ff8264",
-                  // border: "1px solid black"
-              }}
-            >
-              <Typography className='fluffscoop' sx={{fontSize: "30px", height: "50%"}}><b>FluffScoop</b></Typography>
-              <p className='slogan' style={{fontSize: "11px", height: "50%", fontWeight: "500"}}><i>Where every bite is a frozen delight!</i></p>
-            </Box>
-          
+            />  
         </Link>
         
-        <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
-          <Box sx={{ color: "#ff8264" }}>
-            <div className="navLinks">
-              <Link to="our-story" smooth={true} duration={500} className="nav-link">
-                <Button color="inherit">Our Story</Button>
-              </Link>
-              <Link to="ice-creams" smooth={true} duration={500} className="nav-link">
-                <Button color="inherit">Ice-Creams</Button>
-              </Link>
-              <Link to="desserts" smooth={true} duration={500} className="nav-link">
-                <Button color="inherit">Desserts</Button>
-              </Link>
-              <Link to="doughnuts" smooth={true} duration={500} className="nav-link">
-                <Button color="inherit">Doughnuts</Button>
-              </Link>
-            </div>
-          </Box>
+        <nav className={`navLinks ${isMenuOpen ? 'open' : ''}`}>
+          <Link to="our-story" smooth={true} duration={500} className="nav-link">
+            <Button color="inherit">Our Story</Button>
+          </Link>
+
+          <Link to="ice-creams" smooth={true} duration={500} className="nav-link">
+            <Button color="inherit">Ice-Creams</Button>
+          </Link>
+
+          <Link to="desserts" smooth={true} duration={500} className="nav-link">
+            <Button color="inherit">Desserts</Button>
+          </Link>
+
+          <Link to="doughnuts" smooth={true} duration={500} className="nav-link">
+            <Button color="inherit">Doughnuts</Button>
+          </Link>
         </nav>
         
 
         <Box
             sx={{
-                width: "20%",
+                width: "15%",
+                height: "100%",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "end",
+                // border: "1px solid black"
             }}
         >
-          <Button className='cartBtn' onClick={toggleCart} color="inherit" style={{fontSize: "30px", color: "#ff8264"}}>
+          <div className='cartBtn' onClick={toggleCart}>
             <Badge badgeContent={totalItems} color="error">
-              <FaCartShopping />
+              <FaCartShopping style={{fontSize: "30px", color: "#FD7014"}}/>
             </Badge>
-          </Button>
+          </div>
         </Box>
 
         <div className="menu-toggle">

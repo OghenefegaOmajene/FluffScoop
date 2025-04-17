@@ -8,10 +8,10 @@ import SwiperSlider from "@/components/SwiperSlider/SwiperSlider";
 
 const Homepage: React.FC = () => {
   return (
-    <div id="home">
+    <div id="home" style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
       <Container maxWidth={false} disableGutters >
         <Navbar />
-        <SwiperSlider></SwiperSlider>
+        {/* <SwiperSlider></SwiperSlider> */}
       </Container>
     </div>
 

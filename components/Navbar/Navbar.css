@@ -7,6 +7,20 @@
     /* background-color: #ff83648f; */
     /* background-color: #ff836496; */
 }
+nav{
+  /* background-color: black; */
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* gap: 40px; */
+}
+.nav-link Button{
+  color: #FD7014;
+}
+.cartBtn{
+  /* background-color: red; */
+}
 .menu-toggle {
     display: none;
     align-items: center;
