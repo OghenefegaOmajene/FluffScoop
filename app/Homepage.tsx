@@ -19,32 +19,35 @@ const Homepage: React.FC = () => {
         <div className="homeBox" 
           style={{
             width: "100%",
-            height: "34rem",
+            height: "40rem",
             // backgroundColor: "black",
             // border: "1px solid black",
             display: "flex",
-            alignItems: "center",
+            alignItems: "end",
             justifyContent: "center"
           }}
         >
           <div className="heroTxt"
             style={{
               width: "40%",
-              height: "50%",
+              height: "80%",
               // backgroundColor: "grey",
+              paddingTop: "100px",
               // border: "1px solid black",
               display: "flex",
               flexDirection: "column",
               // alignItems: "center",
-              justifyContent: "space-between"
+              justifyContent: "center",
+              gap: "20px"
             }}
           >
             <Typography>Check out our new Summer Release</Typography>
             <Typography variant="h4" className={nosifer.className} sx={{color: "#FD7014"}}>Peanut Butter Pretzel Caramel Swirl Ice Cream</Typography>
             
             <button
+              className="animated-hover-button"
               style={{
-                backgroundColor: "white",
+                // backgroundColor: "white",
                 borderRadius: "30px",
                 border: 0,
                 width: "150px",
@@ -56,8 +59,30 @@ const Homepage: React.FC = () => {
                 gap: "10px",
               }}
             >
-              Explore our store <FaCircleArrowRight style={{color: "#FD7014", fontSize: "20px"}}/>
+              <div className="btn-content">
+                Explore our store <FaCircleArrowRight className="exploreIcon" style={{color: "#FD7014", fontSize: "20px"}}/>
+              </div>
             </button>
+
+
+            <div className="png">
+              <img 
+                src="/images/lilPopsicle.png" 
+                alt="" 
+                style={{
+                    width: "5rem",
+                    height: "5rem",
+                }}
+              />
+              <img 
+                src="/images/twirl.png" 
+                alt="" 
+                style={{
+                    width: "10rem",
+                    height: "10rem"
+                }}
+              />
+            </div>
           </div>
           
           <div className="heroImages"
@@ -76,7 +101,8 @@ const Homepage: React.FC = () => {
               alt="" 
               style={{
                   width: "20rem",
-                  height: "27rem"
+                  height: "25rem",
+                  // border: "1px solid black"
               }}
             />
             {/* <img 

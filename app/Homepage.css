@@ -13,3 +13,66 @@
 .dripTxt{
     font-family: "Nosifer", sans-serif !important;
 }
+.png{
+    /* background-color: black; */
+    height: 8rem;
+    display: flex;
+    gap: 60px;
+    width: 80%;
+    margin-left: 20%;
+    justify-content: space-around;
+    align-items: end;
+}
+.animated-hover-button {
+    position: relative;
+    display: inline-block;
+    /* padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid #fd7014;
+    border-radius: 6px; */
+    background-color: white;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .animated-hover-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #fd7014;
+    z-index: 0;
+    transition: width 0.4s ease;
+  }
+  
+  .animated-hover-button:hover::before {
+    width: 100%;
+    /* background-color: transparent; */
+  }
+  
+  .animated-hover-button:hover {
+    color: white !important;
+    /* background-color: #fd7014; */
+  }
+  .animated-hover-button:hover .exploreIcon{
+    color: white !important;
+  }
+
+  .animated-hover-button .btn-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+    color: black;
+  }
+  
+  .animated-hover-button:hover .btn-content {
+    color: white !important;
+  }
