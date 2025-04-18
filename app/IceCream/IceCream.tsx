@@ -10,64 +10,7 @@ import { GiIceCreamCone } from "react-icons/gi";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import './IceCream.css'
-
-// Define Props Type
-// interface ArrowProps {
-//   onClick?: () => void;
-// }
-
-// const CustomNextArrow: React.FC<ArrowProps> = ({ onClick }) => (
-//   <div
-//     style={{
-//       display: "flex",
-//       alignItems: "center",
-//       justifyContent: "center",
-//       background: "#2d1403",
-//       color: "#ff8264",
-//       borderRadius: "50%",
-//       width: "40px",
-//       height: "40px",
-//       position: "absolute",
-//       right: "-7px", 
-//       top: "50%",
-//       transform: "translateY(-50%)",
-//       cursor: "pointer",
-//       zIndex: 2,
-      
-//     }}
-//     onClick={onClick}
-//   >
-//     <FaArrowRight />
-//   </div>
-// );
-
-// const CustomPrevArrow: React.FC<ArrowProps> = ({ onClick }) => (
-//   <div
-//     style={{
-//       display: "flex",
-//       alignItems: "center",
-//       justifyContent: "center",
-//       background: "#2d1403",
-//       color: "#ff8264",
-//       borderRadius: "50%",
-//       width: "40px",
-//       height: "40px",
-//       position: "absolute",
-//       left: "-60px", 
-//       top: "50%",
-//       transform: "translateY(-50%)",
-//       cursor: "pointer",
-//       zIndex: 2,
-//     }}
-//     onClick={onClick}
-//   >
-//     <FaArrowLeft />
-//   </div>
-// );
-
-
 
 const IceCream: React.FC = () => {
   const settings = {
@@ -113,6 +56,7 @@ const IceCream: React.FC = () => {
           display: "flex", 
           flexDirection: "column", 
           justifyContent: "center", 
+          backgroundColor: "burlywood"
         }}
       >
         <Typography variant="h1" sx={{ color: "#260F08", fontSize: "2.5rem"}}>
@@ -123,6 +67,7 @@ const IceCream: React.FC = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
+            backgroundColor: "white",
           }}
         >
           <div
@@ -131,15 +76,12 @@ const IceCream: React.FC = () => {
               position: "relative",
               overflow: "hidden",
               width: "80%",
-              // maxWidth: "80%", 
-              // margin: "0 0px 0px 130px",// ✅ Centers horizontally
-              // padding: "0 60px",
-              // border: "1px solid crimson"
+              border: "1px solid crimson"
             }}
           >
             <Slider {...settings}>
               {iceCreamData.map((item) => (
-                <div className="wrapStuff" key={item.id} style={{ padding: "0 5px"}} > {/* ✅ Reduces spacing between items */}
+                <div className="wrapStuff" key={item.id}> {/* ✅ Reduces spacing between items */}
                   <IceCreamProduct {...item} />
                 </div>
               ))}

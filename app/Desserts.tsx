@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Product from "@/components/Product";
 import dessertsData from '../data/desserts.json'
 import { GiCakeSlice } from "react-icons/gi";
+import './Desserts.css'
 
 const Desserts: React.FC = () => {
 
@@ -21,17 +22,11 @@ const Desserts: React.FC = () => {
         {/* <Box 
           sx={{display: "flex"}}
         > */}
-          <Box 
-            sx={{
-                display: "flex ",
-                flexWrap: "wrap",
-                justifyContent: "space-between",
-            }}
-          >
+          <div className='dessertsProductContainer'>
             {dessertsData.map((item) =>{
               return <Product key={item.id} {...item} />
             })}
-          </Box>
+          </div>
           
         {/* </Box> */}
         

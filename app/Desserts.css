@@ -1,0 +1,13 @@
+.dessertsProductContainer{
+    /* background-color: red; */
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 528px) {
+    .dessertsProductContainer{
+        justify-content: center;
+    }
+}
