@@ -51,7 +51,7 @@ const IceCream: React.FC = () => {
       <Container 
         maxWidth="lg" 
         sx={{ 
-          paddingTop: "5.5rem", 
+          // paddingTop: "5.5rem", 
           height: "90vh", 
           display: "flex", 
           flexDirection: "column", 
@@ -79,10 +79,10 @@ const IceCream: React.FC = () => {
               border: "1px solid crimson"
             }}
           >
-            <Slider {...settings}>
+            <Slider {...settings} className="sliderr">
               {iceCreamData.map((item) => (
-                <div className="wrapStuff" key={item.id}> {/* ✅ Reduces spacing between items */}
-                  <IceCreamProduct {...item} />
+                <div className="slideWrap" key={item.id}> {/* ✅ Reduces spacing between items */}
+                  <IceCreamProduct {...item}/>
                 </div>
               ))}
             </Slider>

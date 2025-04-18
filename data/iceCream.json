@@ -2,7 +2,7 @@
     {   
         "id": 1,
         "image": "/images/vanilla.png",
-        "name": "French Vanilla Ice Cream",
+        "name": "French Walnut Vanilla Ice Cream",
         "price": 2.40,
         "bgColor": "#ffad28"
     },
@@ -30,7 +30,7 @@
     {   
         "id": 5,
         "image": "/images/strawberry.png",
-        "name": "StrawBerry Ice Cream",
+        "name": "Triple StrawBerry Ice Cream",
         "price": 4.70,
         "bgColor": "#500B28"
     }

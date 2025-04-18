@@ -1,14 +1,29 @@
-.wrapStuff{
+/* .wrapStuff{
     background-color: yellow;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding-left: 40px; */
-    width: 80%;
-    /* gap: 30px; */
-    height: 100%;
-    /* position: relative;
-    overflow: hidden !important;
-    width: 80%; */
+    width: fit-content;
+
+} */
+.slideWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  height: 100%; /* Helps center vertically too */
+}
+.wrapStuff {
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* take full width of the slide */
+  height: 100%;
 }
 
+.sliderr{
+  background-color: aqua;
+  margin: 0;
+  padding: 0;
+}
