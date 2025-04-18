@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Inria+Sans&display=swap');
 
-body, 
-html{ 
+body, html{ 
   /* background-color: #fcf8f6; */
   background-color: #ffd9bf;
   /* background: linear-gradient(
@@ -10,7 +9,7 @@ html{
     #ffb677,
     #ffa45922 
   ); */
-
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
 } 
 

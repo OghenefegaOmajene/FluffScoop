@@ -136,13 +136,13 @@
 @media screen and (max-width: 787px) {
   .heroTxt{
     width: 70%;
-    background-color: rgb(78, 0, 0);
+    /* background-color: rgb(78, 0, 0); */
   }
   .pretzel{
-    border: 1px solid rgb(6, 255, 56);
+    /* border: 1px solid rgb(6, 255, 56); */
   }
   .heroImage{
-    background-color: rgba(255, 255, 255, 0.39);
+    /* background-color: rgba(255, 255, 255, 0.39); */
     z-index: 100;
     margin-left: -10%;
   }
@@ -151,8 +151,9 @@
 
 @media screen and (max-width: 680px) {
   .heroImage{
-    background-color: rgba(255, 255, 255, 0.39);
+    /* background-color: rgba(255, 255, 255, 0.39); */
     z-index: 100;
+    /* position: fixed; */
     width: 45%;
     /* margin-left: -10%; */
   }
@@ -160,11 +161,56 @@
 }
 @media screen and (max-width: 610px) {
   .heroTxt{
-    width: 600px;
+    width: 900px;
     /* background-color: rgb(78, 0, 0); */
   }
   .heroImage{ 
     width: 50%;
+    margin-left: -20%;
   }
 
 }
+
+@media screen and (max-width: 567px) {
+  .homeBox{
+    height: 640px;
+  }
+  .heroTxt{
+    /* background-color: rgb(78, 43, 0); */
+  }
+  .heroImage{ 
+    width: 50%;
+    margin-left: -20%;
+  }
+
+}
+
+@media screen and (max-width: 524px) {
+  .heroImage{ 
+    width: 60%;
+    /* margin-left: -20%; */
+  }
+
+}
+
+@media screen and (max-width: 510px) {
+  .homeBox{
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 100%;
+  }
+  .heroTxt{
+    width: 100%;
+    padding-top: 100px;
+  }
+  .heroImage{
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+    width: 70%;
+    margin-top: -200px;
+  }
+}
+
