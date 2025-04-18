@@ -56,6 +56,7 @@ const Navbar = () => {
           smooth={true} 
           duration={500} 
           className="nav-link" 
+          id='logoLink'
           style={{
             cursor: "pointer", 
             width: "17%", 
@@ -67,15 +68,7 @@ const Navbar = () => {
           }} 
         >
           
-            <img 
-              src="/images/fluffscoopLogo.png" 
-              alt="" 
-              style={{
-                  width: "90%",
-                  height: "70%"
-              }}
-              className='logo'
-            />  
+            <img src="/images/fluffscoopLogo.png" alt="" className='logo'/>  
         </Link>
         
         <nav className={`navLinks ${isMenuOpen ? 'open' : ''}`}>
@@ -93,22 +86,13 @@ const Navbar = () => {
         </nav>
         
 
-        <Box
-            sx={{
-                width: "13%",
-                height: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "end",
-                // border: "1px solid black"
-            }}
-        >
+        <div className='cartBox'>
           <div className='cartBtn' onClick={toggleCart}>
             <Badge badgeContent={totalItems} color="error">
               <FaCartShopping style={{fontSize: "30px", color: "#FD7014"}}/>
             </Badge>
           </div>
-        </Box>
+        </div>
 
         <div className="menu-toggle">
             <input type="checkbox" id="checkbox" checked={isMenuOpen} onChange={toggleMenu} />

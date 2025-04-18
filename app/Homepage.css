@@ -1,14 +1,32 @@
 
 /* @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Nosifer&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300..700&display=swap'); */
-
+#home{
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .homeBox{
-    width: "100%";
-    height: "36rem";
+    width: 100%;
+    height: 36rem;
     /* backgroundColor: "black", */
-    border: "1px solid black";
-    display: "flex";
-    align-items: "center";
-    justify-content: "center"
+    /* border: 1px solid black; */
+    /* background-color: rgba(255, 255, 255, 0.395); */
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.heroTxt{
+  width: 40%;
+  height: 90%;
+  /* background-color: rgb(72, 0, 0); */
+  /* padding-top: 100px; */
+  display: flex;
+  flex-direction: column;
+  /* alignItems: center; */
+  justify-content: end;
+  gap: 20px;
+              
 }
 .dripTxt{
     font-family: "Nosifer", sans-serif !important;
@@ -22,6 +40,14 @@
     margin-left: 20%;
     justify-content: space-around;
     align-items: end;
+}
+.lilPopsicle{
+  width: 5rem;
+  height: 5rem;
+}
+.twirl{
+  width: 10rem;
+  height: 10rem;
 }
 .animated-hover-button {
     position: relative;
@@ -59,6 +85,10 @@
     color: white !important;
     /* background-color: #fd7014; */
   }
+.exploreIcon{
+  color: #FD7014; 
+  font-size: 20px;
+}
   .animated-hover-button:hover .exploreIcon{
     color: white !important;
   }
@@ -76,3 +106,65 @@
   .animated-hover-button:hover .btn-content {
     color: white !important;
   }
+
+
+.heroImage{
+  width: 40%;
+  height: 100%;
+  /* background-color: grey; */
+  /* border: "1px solid black", */
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.pretzel{
+  width: 20rem;
+  height: 25rem;
+  /* border: 1px solid black; */
+}
+
+@media screen and (max-width: 982px) {
+  .homeBox{
+    display: flex;
+  }
+  .heroTxt{
+    width: 50%;
+  }
+
+}
+
+@media screen and (max-width: 787px) {
+  .heroTxt{
+    width: 70%;
+    background-color: rgb(78, 0, 0);
+  }
+  .pretzel{
+    border: 1px solid rgb(6, 255, 56);
+  }
+  .heroImage{
+    background-color: rgba(255, 255, 255, 0.39);
+    z-index: 100;
+    margin-left: -10%;
+  }
+
+}
+
+@media screen and (max-width: 680px) {
+  .heroImage{
+    background-color: rgba(255, 255, 255, 0.39);
+    z-index: 100;
+    width: 45%;
+    /* margin-left: -10%; */
+  }
+
+}
+@media screen and (max-width: 610px) {
+  .heroTxt{
+    width: 600px;
+    /* background-color: rgb(78, 0, 0); */
+  }
+  .heroImage{ 
+    width: 50%;
+  }
+
+}

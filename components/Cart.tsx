@@ -94,7 +94,7 @@ const Cart: React.FC<CartProps> = ({ isCartOpen, toggleCart }) => {
                 justifyContent: "space-between"
                 // gap: "4rem"
             }}
-        >¬
+        >
             <Typography 
                 sx={{
                     color: "#C73B0F", 
