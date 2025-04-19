@@ -47,7 +47,7 @@ const IceCream: React.FC = () => {
   };
 
   return (
-    <div id="ice-creams">
+    <div id="ice-creams" style={{ paddingTop: "80px"}}>
       <Container 
         maxWidth="lg" 
         sx={{ 
@@ -56,8 +56,9 @@ const IceCream: React.FC = () => {
           display: "flex", 
           flexDirection: "column", 
           justifyContent: "center", 
-          backgroundColor: "burlywood"
+          // backgroundColor: "burlywood"
         }}
+        className="iceCreamContainer"
       >
         <Typography variant="h1" sx={{ color: "#260F08", fontSize: "2.5rem"}}>
           Ice Creams <GiIceCreamCone />
@@ -67,7 +68,7 @@ const IceCream: React.FC = () => {
           sx={{
             display: "flex",
             justifyContent: "center",
-            backgroundColor: "white",
+            // backgroundColor: "white",
           }}
         >
           <div
@@ -76,7 +77,7 @@ const IceCream: React.FC = () => {
               position: "relative",
               overflow: "hidden",
               width: "80%",
-              border: "1px solid crimson"
+              // border: "1px solid crimson"
             }}
           >
             <Slider {...settings} className="sliderr">
