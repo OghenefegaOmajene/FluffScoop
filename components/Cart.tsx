@@ -41,41 +41,30 @@ const Cart: React.FC<CartProps> = ({ isCartOpen, toggleCart }) => {
     }, [getOrderTotal, getNumberOfItems]);
     
   return (
-    // <Box
-    //     sx={{
-    //         backgroundColor: "#FFFFFF",
-    //         width: "350px",
-    //         position: "fixed",
-    //         right: isCartOpen ? "0" : "-100%",
-    //         borderRadius: "0.5rem",
-    //         marginLeft: "2rem",
-    //         height: "100%",
-    //         transition: "right 0.3s ease-in-out",
-    //         zIndex: 10000,
-    //         overflowY: "scroll",
-    //         overflowX: "hidden",
-    //         padding: "1.5rem",
-    //     }}    
-    // >
-        
+
     <Box
-        sx={{
+        sx={(theme) => ({
             backgroundColor: "#FFFFFF",
-            width: "100%",                // Responsive base width
-            maxWidth: "350px",            // Don’t exceed this width
+            width: "100%",
+            maxWidth: "350px",
             position: "fixed",
             top: 0,
-            right: isCartOpen ? 0 : "-300%",
-            // borderRadius: "0.5rem",
+            right: isCartOpen ? 0 : "-150%",
             height: "100%",
             transition: "right 0.3s ease-in-out",
             zIndex: 10000,
             overflowY: "scroll",
             overflowX: "hidden",
             padding: "1.5rem",
-            // Remove marginLeft — causes shifting
-            // marginLeft: "2rem",
-        }}
+
+            // 👇 Add responsive override for 420px
+            [theme.breakpoints.down(420)]: {
+            maxWidth: "300px",
+            },
+            [theme.breakpoints.down(370)]: {
+                maxWidth: "280px",
+            },
+        })}
     >
 
         <Box 

@@ -72,11 +72,34 @@
 
 @media screen and (max-width: 418px) {
     .ourStoryImgBox{
-        width: 350px;
-        
+        width: 370px;
+        /* background-color: red; */
     }
     #our-story{
         height: 810px;
     }
+} 
 
+@media screen and (max-width: 400px) {
+    .ourStoryImgBox{
+        width: 350px;
+        /* background-color: red; */
+    }
+    #our-story{
+        height: 810px;
+    }
+} 
+
+@media screen and (max-width: 364px) {
+    .ourStoryImg1{
+        width: 350px;
+        /* background-color: red; */
+    }
+
+} 
+
+@media screen and (max-width: 370px) {
+    .ourStoryImg2{
+        margin-left: -250px !important;
+    }
 } 

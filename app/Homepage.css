@@ -204,6 +204,7 @@
   .heroTxt{
     width: 100%;
     padding-top: 100px;
+    /* border: 1px solid black; */
   }
   .heroImage{
     display: flex;
