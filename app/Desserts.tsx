@@ -10,7 +10,7 @@ import './Desserts.css'
 const Desserts: React.FC = () => {
 
   return (
-    <div id="desserts" style={{ paddingTop: "20px"}}>
+    <div id="desserts" style={{ paddingTop: "80px"}}>
       <Container maxWidth="lg" sx={{paddingTop: "5.5rem"}}>
         <Typography 
           variant="h1" 

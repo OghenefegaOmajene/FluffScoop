@@ -24,7 +24,17 @@ const Homepage: React.FC = () => {
         <div className="homeBox">
           <div className="heroTxt">
             <Typography>Check out our new Summer Release</Typography>
-            <Typography variant="h4" className={nosifer.className} sx={{color: "#FD7014"}}>Peanut Butter Pretzel Caramel Swirl Ice Cream</Typography>
+            <Typography 
+              variant="h4" 
+              className={nosifer.className} 
+              sx={(theme) => ({
+                color: "#FD7014" ,
+                [theme.breakpoints.down(403)]: {fontSize: "30px"},
+                [theme.breakpoints.down(357)]: {fontSize: "27px"},
+              })}
+              >
+                Peanut Butter Pretzel Caramel Swirl Ice Cream
+            </Typography>
             
             <button
               className="animated-hover-button"

@@ -47,7 +47,7 @@ const IceCream: React.FC = () => {
   };
 
   return (
-    <div id="ice-creams" style={{ paddingTop: "80px"}}>
+    <div id="ice-creams" style={{ paddingTop: "130px"}}>
       <Container 
         maxWidth="lg" 
         sx={{ 
